@@ -9,6 +9,8 @@
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage{ragged2e}
+\newlist{steps}{enumerate}{1}
+\setlist[steps, 1]{label = Step \arabic*:}
 
 \hypersetup{colorlinks,linkcolor=black,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
 \title{Project Report}
@@ -877,9 +879,9 @@ What else you can do. Anvil also has built-in support for:
 \item Exposing and using HTTP APIs
 \item Integrating with services from: Google, Microsoft, Facebook and anything else with a Python SDK!
 \end{enumerate}
-\\
+
 \textbf{Deep Notebook}
-\\
+
 Deepnote is a seriously slick Python notebook, hosted in the cloud, with incredible real-time collaboration. It’s great for working with other data scientists. But what happens when you want to share your project with non-programmers? They need an easy-to-use interface – so you need to deploy what you’ve built. Deepnote has been used to integrate the machine learning code to Anvil.
 \newpage
 \subsubsection{Python Packages}
@@ -906,9 +908,9 @@ Pandas makes it simple to do many of the time consuming, repetitive tasks associ
 \item Data inspection
 \item Loading and saving data etc..
 \end{itemize}
-\\
+
 \textbf{Matplotlib}
-\\
+
 Matplotlib is an amazing visualization library in Python for 2D plots of arrays. Matplotlib is a multi-platform data visualization library built on NumPy arrays and designed to work with the broader SciPy stack. It was introduced by John Hunter in the year 2002.One of the greatest benefits of visualization is that it allows us visual access to huge amounts of data in easily digestible visuals. Matplotlib consists of several plots like line, bar, scatter, histogram etc.
 \textbf{Seaborn}
 \\
@@ -984,37 +986,12 @@ In this algorithm, decision trees are created in sequential form. Weights play a
 \begin{enumerate}
 \item \bf{Regularization:} Since the ensembling of decisions, trees can sometimes lead to very complex. XGBoost uses both Lasso and Ridge Regression regularization to penalize the highly complex model.
 \item \bf{Parallelization} and Cache block: In, XGboost, we cannot train multiple trees parallel, but it can generate the different nodes of tree parallel. For that, data needs to be sorted in order. In order to reduce the cost of sorting, it stores the data in blocks. It stored the data in the compressed column format, with each column sorted by the corresponding feature value. This switch improves algorithmic performance by offsetting any parallelization overheads in computation.
-\item \bf{Tree Pruning:}  XGBoost uses max_depth parameter as specified the stopping criteria for the splitting of the branch, and starts pruning trees backward. This depth-first approach improves computational performance significantly.
+\item \bf{Tree Pruning:}  XGBoost uses max\_depth parameter as specified the stopping criteria for the splitting of the branch, and starts pruning trees backward. This depth-first approach improves computational performance significantly.
 \item \bf{Cache-Awareness and Out-of-score computation:} This algorithm has been designed to make use of hardware resources efficiently. This is accomplished by cache awareness by allocating internal buffers in each thread to store gradient statistics. Further enhancements such as ‘out-of-core computing optimize available disk space while handling big data-frames that do not fit into memory. In out-of-core computation, Xgboost tries to minimize the dataset by compressing it.
 \item \bf{Sparsity Awareness:} XGBoost can handle sparse data that may be generated from preprocessing steps or missing values. It uses a special split finding algorithm that is incorporated into it that can handle different types of sparsity patterns.
 \item \bf{Weighted Quantile Sketch:} XGBoost has in-built the distributed weighted quantile sketch algorithm that makes it easier to effectively find the optimal split points among weighted datasets.
 \item \bf{Cross-validation:} XGboost implementation comes with a built-in cross-validation method. This helps the algorithm prevents overfitting when the dataset is not that big.
-
-\newpage
-\begin{flushleft}\textbf{CHAPTER 4} \end{flushleft}
-\begin{flushleft}\section{SOFTWARE REQUIREMENTS\&
-HARDWARE REQUIREMENTS} \end{flushleft}
-\vspace*{10px}
-\subsection{SOFTWARE REQUIREMENTS}
-
-\begin{itemize}
-\item  WEB APP - Any web Browser of the last OS
-\item  ANDROID DEVICE - Android 4.1 (API level 16) or higher.
-\item  IOS DEVICE - IOS 9.0 Later
-\end{itemize}
-\vspace{10px}
-       
-\subsection{HARDWARE REQUIREMENTS}
-
-\begin{itemize}
-\item WEB APP - Pentium 4 processor or higher, and the computer must have approximately 100MB of free hard drive space and 128MB of RAM.
-
-\item ANDROID DEVICE :  Intel Atom Processor Z2520 1.2 GHz or faster, the the device must have minimum 850 MB of storage and 512 MB of RAM. 
-          
-\item iOS DEVICE : Any iphone.
-
-\end{itemize}
-\vspace{10px}
+\end{enumerate}
 
 \newpage
 \begin{flushleft}\textbf{CHAPTER 5} \end{flushleft}
@@ -1033,7 +1010,7 @@ the existing system in the area under investigation or generally ideas about a n
 system. It is a test of a system proposal according to its work ability, impact on the
 organization, ability to meet user needs, and effective use of resources. The objective
 of feasibility study is not to solve the problem but to acquire a sense of its scope.
-Feasibility analysis involves 6 steps
+Feasibility analysis involves following steps
 \begin{itemize}
 \item  Form a project and appoint a project leader
 \item Prepare system flowcharts
@@ -1111,6 +1088,7 @@ The software can be developed with resource already existing. Here the considera
 is that the existing hardware resources support the technologies that are to be used by
 the new system. No hardware was newly bought for the project and hence. Software
 is to achieve hardware feasibility.
+
 \newpage
 \begin{flushleft}\textbf{CHAPTER 6} \end{flushleft}
 \begin{flushleft}\section{REQUIREMENT SPECIFICATION} \end{flushleft}
@@ -1119,16 +1097,15 @@ is to achieve hardware feasibility.
 \subsection{Software Requirements}
 \begin{itemize}
 \item Python (Version 3.0+)
-\item PyCharm IDE
-\item WampServer
-\item SQLyog
-\item os:windows 8 or above
+\item Anvil
+\item GitHub
+\item DeepNote
+\item ipynb file
 \end{itemize}
 
 \subsubsection{User Requirements}
 \begin{itemize}
-\item Android (Version 5.0+)
-\item Google Chrome (or any browser)
+\item Any Web Browser
 \end{itemize}
 
 \subsection{Hardware Requirements}
@@ -1153,105 +1130,72 @@ is to achieve hardware feasibility.
 
 \subsection{Data Flow Diagram}
 
-A data-flow diagram is a way of representing a flow of data through a process or a system (usually an information system). The DFD also provides information about the outputs and inputs of each entity and the process itself. 
+DFD is the abbreviation for Data Flow Diagram. The flow of data of a system or a process is represented by DFD. It also gives insight into the inputs and outputs of each entity and the process itself. DFD does not have control flow and no loops or decision rules are present. Specific operations depending on the type of data can be explained by a flowchart. Data Flow Diagram can be represented in several ways. The DFD belongs to structured-analysis modeling tools. Data Flow diagrams are very popular because they help us to visualize the major steps and data involved in software-system processes.
 
-There are several notations for displaying data-flow diagrams. The notation presented above was described in 1979 by Tom DeMarco as part of structured analysis.
+In Software engineering DFD(data flow diagram) can be drawn to represent the system of different levels of abstraction. Higher-level DFDs are partitioned into low levels-hacking more information and functional elements. Levels in DFD are numbered 0, 1, 2 or beyond. Here, we will see mainly 3 levels in the data flow diagram, which are: 0-level DFD, 1-level DFD, and 2-level DFD. 	
 
-For each data flow, at least one of the endpoints (source and / or destination) must exist in a process. The refined representation of a process can be done in another data-flow diagram, which subdivides this process into sub-processes.
+\begin{itemize}
 
-The data-flow diagram is a tool that is part of structured analysis and data modeling. When using UML, the activity diagram typically takes over the role of the data-flow diagram. A special form of data-flow plan is a site-oriented data-flow plan.
+\item \textbf{0-level DFD: }
+It is also known as a context diagram. It’s designed to be an abstraction view, showing the system as a single process with its relationship to external entities. It represents the entire system as a single bubble with input and output data indicated by incoming/outgoing arrows. 
 
-Data-flow diagrams can be regarded as inverted Petri nets, because places in such networks correspond to the semantics of data memories. Analogously, the semantics of transitions from Petri nets and data flows and functions from data-flow diagrams should be considered equivalent.
-
-
-
-
-
-
-
-\begin{flushleft}\textbf{Level 1.1}\end{flushleft}
-
-
-\begin{figure}[h!]
+\begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.5]{10 DFD 1.jpeg}
-\caption{ level 1.1 DFD}
+\includegraphics[scale=.5]{0-LEVEL DFD}
+\caption{0-level DFD}
 \end{center}
 \end{figure}
 
+\item \textbf{1-level DFD: }
+In 1-level DFD, the context diagram is decomposed into multiple bubbles/processes. In this level, we highlight the main functions of the system and breakdown the high-level process of 0-level DFD into subprocesses. 
 
-\newpage
-
-\begin{flushleft}\textbf{Level 1.2}\end{flushleft}
-
-
-\begin{figure}[h!]
+\begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.5]{11 DFD 2.png}
-\caption{level 1.2 DFD}
+\includegraphics[scale=.5]{1-LEVEL DFD}
+\caption{1-level DFD}
 \end{center}
 \end{figure}
 
+\item \textbf{2-level DFD: }
+2-level DFD goes one step deeper into parts of 1-level DFD. It can be used to plan or record the specific/necessary detail about the system’s functioning. 
 
-\begin{flushleft}\textbf{Level 1.3}\end{flushleft}
-
-
-\begin{figure}[h!]
+\begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.5]{12 DFD 3.jpeg}
-\caption{ level 1.3 DFD}
+\includegraphics[scale=.5]{2- LEVEL DFD}
+\caption{2-level DFD}
 \end{center}
 \end{figure}
 
+\end{itemize}
 
+\subsection{UML DIAGRAMS}
 
-
-
-\newpage
-
-\subsection{UML DIAGRAM}
+It is the general-purpose modeling language used to visualize the system. It is a graphical language that is standard to the software industry for specifying, visualizing, constructing, and documenting the artifacts of the software systems, as well as for business modeling.
+Benefits of UML: 
+\begin{itemize}
+\item Simplifies complex software design, can also implement OOPs like a concept that is widely used.
+\item It reduces thousands of words of explanation in a few graphical diagrams that may reduce time consumption to understand.
+\item It makes communication more clear and more real.
+\item It helps to acquire the entire system in a view.
+\item It becomes very much easy for the software programmer to implement the actual demand once they have a clear picture of the problem.
+\end{itemize}
 
 \subsubsection{Sequence Diagram}
 
-A sequence diagram is an interaction diagram that emphasis the time
-ordering of the messages; a collaboration diagram is an interaction diagram that
-emphasizes the structural organization of the objects that send and receive messages.
-Sequence diagrams and collaboration diagrams are isomorphic, meaning that you
-can take one and transform it into the other. Sequence diagrams are typically
-associated with use case realizations in the logical view of the system under
-development. Sequence diagrams are sometimes called event diagrams or event
-scenarios. A sequence diagram shows, as parallel vertical lines, different processes or
-objects that lives simultaneously, and as horizontal arrow, the messages exchanged
-between them, in the order in which they occur. This allows the Specification of
-Simple’s Runtime Scenarios In A Graphical Manner.
-\\ 
+The sequence diagram represents the flow of messages in the system and is also termed as an event diagram. It helps in envisioning several dynamic scenarios. It portrays the communication between any two lifelines as a time-ordered sequence of events, such that these lifelines took part at the run time. In UML, the lifeline is represented by a vertical bar, whereas the message flow is represented by a vertical dotted line that extends across the bottom of the page. It incorporates the iterations as well as branching.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.4]{sequence diagram}
+\includegraphics[scale=.4]{Sequence diagram}
 \caption{Sequence Diagram}
 \end{center}
 \end{figure}
 
-\newpage
 \subsubsection{Use Case Diagram}
 
-A use case diagram is a graphic depiction of the interactions among the
-elements of a system. A use case is a methodology used in system analysis
-to identify, clarify and organize system requirements’ use case diagram at its
-simplest is representation of a user's interaction with the system that shows the
-relationship between the user and the different use cases in which the user is
-involved. A use case diagram can identify the different types of users of a system
-and the different use cases and will often be accompanied by other types of
-diagrams as well.
-\par The purpose of use case diagram is to capture the dynamic aspect of a
-system. Use case diagrams are used to gather the requirements of a system
-including internal and external influences. These requirements are mostly design
-requirements. So when a system is analyzed to gather its functionalities use case
-are prepared and actors are identified.
+A use case diagram is used to represent the dynamic behavior of a system. It encapsulates the system's functionality by incorporating use cases, actors, and their relationships. It models the tasks, services, and functions required by a system/subsystem of an application. It depicts the high-level functionality of a system and also tells how the user handles a system.
 
-
-\begin{figure}[h!]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=.3]{use case diagram}
 \caption{Use Case Diagram}
@@ -1261,82 +1205,71 @@ are prepared and actors are identified.
 \newpage
 \subsubsection{Activiy Diagram}
 
-
-Activity diagrams are graphical representations of workflows of stepwise
-activities and actions with support for choice, iteration and concurrency. In the
-Unified Modelling Language, activity diagrams are intended to model both
-computational and organizational processes (i.e. workflows). Activity diagrams
-show the overall flow of control. Activity diagrams are constructed from a limited
-number of shapes, connected with arrows. The most important shape types:
-\\
-
-• Rounded rectangles represent actions;\\
-
-• Diamonds represent decisions;\\
-
-• Bars represent the start (split) or end (join) of concurrent activities;\\
-
-• A black circle represents the start (initial node) of the workflow; An encircled
-black circle represents the end (final node).\\
-
-\par Arrows run from the start towards the end and represent the order in
-which activities happen. Activity diagrams may be regarded as a form of
-flowchart. Typical flowchart techniques lack constructs for expressing concurrency.
-However, the join and split symbols in activity diagrams only resolve this
-for simple cases; the meaning of the model is not clear when they are arbitrarily
-combined with decisions or loops.
-\\ 
+An activity diagram is a behavioral diagram i.e. it depicts the behavior of a system. An activity diagram portrays the control flow from a start point to a finish point showing the various decision paths that exist while the activity is being executed. We can depict both sequential processing and concurrent processing of activities using an activity diagram. They are used in business and process modelling where their primary use is to depict the dynamic aspects of a system. An activity diagram is very similar to a flowchart.
 
 \vspace*{10px}
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.3]{3 Activity Diagram.jpg}
-\caption{Activity diagram of Student}
+\includegraphics[scale=.3]{Activity diagram}
+\caption{Activity Diagram}
 \end{center}
 \end{figure}
-
-
-\newpage
 
 \subsubsection{Class Diagram}
 
-The class diagram is the main building block of object-oriented modelling. It is used for general conceptual modelling of the structure of the application, and for detailed modelling, translating the models into programming code. Class diagrams can also be used for data modelling.
-\par Class diagram is a static diagram. It represents the static view of an application. Class diagram is not only used for visualizing, describing, and documenting different aspects of a system but also for constructing executable code of the software application. Class diagram describes the attributes and operations of a class and also the constraints imposed on the system. The class diagrams are widely used in the modeling of objectoriented systems because they are the only UML diagrams, which can be mapped directly with object-oriented languages.
-\par Class diagram shows a collection of classes, interfaces, associations, collaborations, and constraints. It is also known as a structural diagram.
+Class diagram is a static diagram. It represents the static view of an application. Class diagram is not only used for visualizing, describing, and documenting different aspects of a system but also for constructing executable code of the software application.
 
-\begin{figure}[h!]
+Class diagram describes the attributes and operations of a class and also the constraints imposed on the system. The class diagrams are widely used in the modeling of objectoriented systems because they are the only UML diagrams, which can be mapped directly with object-oriented languages.
+
+Class diagram shows a collection of classes, interfaces, associations, collaborations, and constraints. It is also known as a structural diagram.
+
+\begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.4]{4 Class Diagram 1.jpg}
+\includegraphics[scale=.4]{Class diagram}
 \caption{Class Diagram}
 \end{center}
 \end{figure}
-\newpage
-
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=.4]{5 CLASS DIAGRAM 2.jpg}
-\caption{Class Diagram}
-\end{center}
-\end{figure}
-
-
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=.4]{6 CLASS DIAGRAM 3.jpg}
-\caption{Class Diagram}
-\end{center}
-\end{figure}
-
-
 
 \newpage
 \begin{flushleft}\textbf{CHAPTER 8} \end{flushleft}
 \begin{flushleft}\section{IMPLEMENTATION} \end{flushleft}
-\vspace*{10px}
 
+\subsection{Module Description}
 
+The system architecture depicts the overall working of our system .
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.4]{ML1}
+\caption{System Architecture}
+\end{center}
+\end{figure}
 
+The modules in the system architecture are:
+\begin{itemize}
 
+\item \textbf{Database:} The database contains the dataset of the student placement information from the previous year data. This data is used to train the machine learning model. 
+
+\item \textbf{Data Pre-Processing:} 
+Today's real world databases are highly susceptable to noisy, missing and inconsistent data due to their huge size and their lightly origin from multiple heterogeneous sources. Low quality data will lead to low quality Prediction results. Data prerocessing helps to improve the quality of the data and consequently of the Prediction results. Data preprocessing is a data mining technique which is used to transform the raw data in a useful and efficient format. There are several pre-processing techiniques such as :
+\begin{enumerate}
+\item \textbf{Data Cleaning:} It can be applied to remove noise and correct inconsistency in the data. It cleans the data by filling the missing values, smoothing noisy data, identify or removing outlayers and removing inconsistencies.
+\item \textbf{Label Encoding:}
+Label Encoding refers to converting the labels into a numeric form so as to convert them into the machine-readable form. Machine learning algorithms can then decide in a better way how those labels must be operated. It is an important pre-processing step for the structured dataset in supervised learning.
+\item \textbf{Feature Scaling:}Feature Scaling or Standardization: It is a step of Data Pre Processing that is applied to independent variables or features of data. It basically helps to normalize the data within a particular range. Sometimes, it also helps in speeding up the calculations in an algorithm.
+\end{enumerate}
+\item \textbf{Splitting the Data:}
+It splits the data into training and testing data where it uses the training data to train the machine learning algorithms with 80\% of the data and remianing 20\% data for testing the accuracy of the machine learning algorithm.
+\item \textbf{Training:}
+The training data is trained with the different machine learning algorithm such as Logistic regression, KNN Algorithm, SVM Algorithm, Decision Tree and XGBoost Classifier.
+\item \textbf{Testing:} All the trained machine learning algorithms are being tested with testing data and accuracy of all the machine learning algorithms are compared to get the best machine learning algorithm.
+\item \textbf{Prediction:} The best machine learning algorithm is used to predict the result of the individual prediction of the input taken from the user interface.
+\end{itemize}
+\subsection{Working}
+The working of the system is described as follows :
+\begin{steps}
+  \item \textbf{Login:} Login to the campus placement assistant website by signing up with email or using google for sign in .
+  \item \textbf{:}
+\end{steps}
 \newpage
 \begin{flushleft}\textbf{CHAPTER 8} \end{flushleft}
 \begin{flushleft}\section{TESTING} \end{flushleft}
