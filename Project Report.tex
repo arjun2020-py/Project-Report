@@ -304,7 +304,9 @@ biodata and skillsets, according to students’ academic details
 the system will identify whether the student is eligible for the 
 placement and recommend the courses to the students. Admin 
 creates the courses and registers students to the respective 
-courses. Admin can view the courses and students along with 
+courses. 
+\\
+Admin can view the courses and students along with 
 their attributes. Admin predicts placement status of current 
 students. If the student is eligible for placement mail will be 
 sent to the student from admin and students names will be 
@@ -312,7 +314,7 @@ displayed on the dashboard in their colleges.
 
 \begin{figure}[H]
 \begin{center}
- \includegraphics[width=10cm, height=3.9cm]{L1P1}
+ \includegraphics[width=10cm, height=10cm]{L1P1}
 \caption{System Architecture}
 \end{center}
 \end{figure}
@@ -406,7 +408,7 @@ student being placed.
 
 \begin{figure}[H]
 \begin{center}
- \includegraphics[width=10cm, height=3.9cm]{L2P2}
+ \includegraphics[width=10cm, height=8cm]{L2P2}
 \caption{Student Data}
 \end{center}
 \end{figure}
@@ -444,7 +446,7 @@ student is placed or not placed.
 
 \begin{figure}[H]
 \begin{center}
- \includegraphics[width=10cm, height=3.9cm]{L2P1}
+ \includegraphics[width=10cm, height=6cm]{L2P1}
 \caption{Decision Tree}
 \end{center}
 \end{figure}
@@ -548,7 +550,7 @@ training.
 
 \begin{figure}[H]
 \begin{center}
- \includegraphics[width=10cm, height=3.9cm]{L3P1}
+ \includegraphics[width=10cm, height=6cm]{L3P1}
 \caption{Fuzzy Inference System of each Input}
 \end{center}
 \end{figure}
@@ -575,7 +577,7 @@ and creates output in terms of eligibility corresponding inputs.
 
 \begin{figure}[H]
 \begin{center}
- \includegraphics[width=10cm, height=3.9cm]{L3P2}
+ \includegraphics[width=10cm, height=6cm]{L3P2}
 \caption{Output of Classified Individual student result}
 \end{center}
 \end{figure}
@@ -628,7 +630,7 @@ placement prediction is done by machine learning Algorithm using SVM.
 
 \begin{figure}[H]
 \begin{center}
- \includegraphics[width=10cm, height=3.9cm]{L4P1}
+ \includegraphics[width=10cm, height=10cm]{L4P1}
 \caption{System Architecture}
 \end{center}
 \end{figure}
@@ -746,7 +748,7 @@ The system consists of two phases –
 
 \begin{figure}[H]
 \begin{center}
- \includegraphics[width=10cm, height=3.9cm]{L5P1}
+ \includegraphics[width=10cm, height=6cm]{L5P1}
 \caption{Dynamic predictor }
 \end{center}
 \end{figure}
@@ -766,7 +768,7 @@ Step4: This placement probability will be displayed on the web page back through
 
 \begin{figure}[H]
 \begin{center}
- \includegraphics[width=10cm, height=3.9cm]{L5P2}
+ \includegraphics[width=10cm, height=6cm]{L5P2}
 \caption{Static predictor }
 \end{center}
 \end{figure}
@@ -925,7 +927,7 @@ Seaborn offers the following functionalities:
 \end{itemize}
 
 \newpage
-\subsection{GitHub}
+\subsubsection{GitHub}
 GitHub is a Git repository hosting service that provides a web-based graphical interface (GUI). It helps every team member work together on a project from anywhere, making it easy to collaborate. 
 
 GitHub is one place where project managers and developers coordinate, track, and update their work, so projects stay transparent and on schedule. The packages can be published privately, within the team, or publicly for the open-source community. Downloading packages from GitHub enables them to be used and reused. GitHub helps all team members stay on the same page and stay organized. Moderation tools, like issue and pull request locking, helps the team focus on the code.
@@ -950,7 +952,7 @@ Bagging reduces overfitting (variance) by averaging or voting, however, this lea
 
 \begin{figure}[H]
 \begin{center}
- \includegraphics[width=10cm, height=3.9cm]{Tech1}
+ \includegraphics[width=10cm, height=6cm]{Tech1}
 \caption{Bagging Classifier}
 \end{center}
 \end{figure}
@@ -967,7 +969,7 @@ Boosting is an ensemble modelling, technique that attempts to build a strong cla
 
 \begin{figure}[H]
 \begin{center}
- \includegraphics[width=10cm, height=3.9cm]{Tech2}
+ \includegraphics[width=10cm, height=6cm]{Tech2}
 \caption{Boosting}
 \end{center}
 \end{figure}
@@ -978,19 +980,17 @@ Gradient Boosting is a popular boosting algorithm. In gradient boosting, each pr
 There is a technique called the Gradient Boosted Trees whose base learner is CART (Classification and Regression Trees).
 
 \textbf{XGBoost }
-XGBoost is an implementation of Gradient Boosted decision trees. XGBoost models majorly dominate in many Kaggle Competitions.
-
-In this algorithm, decision trees are created in sequential form. Weights play an important role in XGBoost. Weights are assigned to all the independent variables which are then fed into the decision tree which predicts results. The weight of variables predicted wrong by the tree is increased and these variables are then fed to the second decision tree. These individual classifiers/predictors then ensemble to give a strong and more precise model. It can work on regression, classification, ranking, and user-defined prediction problems.
+XGBoost is an implementation of Gradient Boosted decision trees. XGBoost models majorly dominate in many Kaggle Competitions.In this algorithm, decision trees are created in sequential form. Weights play an important role in XGBoost. Weights are assigned to all the independent variables which are then fed into the decision tree which predicts results. The weight of variables predicted wrong by the tree is increased and these variables are then fed to the second decision tree. These individual classifiers/predictors then ensemble to give a strong and more precise model. It can work on regression, classification, ranking, and user-defined prediction problems.
 
 \textbf{Features of XGBoost}
 \begin{enumerate}
-\item \bf{Regularization:} Since the ensembling of decisions, trees can sometimes lead to very complex. XGBoost uses both Lasso and Ridge Regression regularization to penalize the highly complex model.
-\item \bf{Parallelization} and Cache block: In, XGboost, we cannot train multiple trees parallel, but it can generate the different nodes of tree parallel. For that, data needs to be sorted in order. In order to reduce the cost of sorting, it stores the data in blocks. It stored the data in the compressed column format, with each column sorted by the corresponding feature value. This switch improves algorithmic performance by offsetting any parallelization overheads in computation.
-\item \bf{Tree Pruning:}  XGBoost uses max\_depth parameter as specified the stopping criteria for the splitting of the branch, and starts pruning trees backward. This depth-first approach improves computational performance significantly.
-\item \bf{Cache-Awareness and Out-of-score computation:} This algorithm has been designed to make use of hardware resources efficiently. This is accomplished by cache awareness by allocating internal buffers in each thread to store gradient statistics. Further enhancements such as ‘out-of-core computing optimize available disk space while handling big data-frames that do not fit into memory. In out-of-core computation, Xgboost tries to minimize the dataset by compressing it.
-\item \bf{Sparsity Awareness:} XGBoost can handle sparse data that may be generated from preprocessing steps or missing values. It uses a special split finding algorithm that is incorporated into it that can handle different types of sparsity patterns.
-\item \bf{Weighted Quantile Sketch:} XGBoost has in-built the distributed weighted quantile sketch algorithm that makes it easier to effectively find the optimal split points among weighted datasets.
-\item \bf{Cross-validation:} XGboost implementation comes with a built-in cross-validation method. This helps the algorithm prevents overfitting when the dataset is not that big.
+\item\textbf{Regularization:} Since the ensembling of decisions, trees can sometimes lead to very complex. XGBoost uses both Lasso and Ridge Regression regularization to penalize the highly complex model.
+\item\textbf{Parallelization} and Cache block: In, XGboost, we cannot train multiple trees parallel, but it can generate the different nodes of tree parallel. For that, data needs to be sorted in order. In order to reduce the cost of sorting, it stores the data in blocks. It stored the data in the compressed column format, with each column sorted by the corresponding feature value. This switch improves algorithmic performance by offsetting any parallelization overheads in computation.
+\item\textbf{Tree Pruning:}  XGBoost uses max\_depth parameter as specified the stopping criteria for the splitting of the branch, and starts pruning trees backward. This depth-first approach improves computational performance significantly.
+\item\textbf{Cache-Awareness and Out-of-score computation:} This algorithm has been designed to make use of hardware resources efficiently. This is accomplished by cache awareness by allocating internal buffers in each thread to store gradient statistics. Further enhancements such as ‘out-of-core computing optimize available disk space while handling big data-frames that do not fit into memory. In out-of-core computation, Xgboost tries to minimize the dataset by compressing it.
+\item\textbf{Sparsity Awareness:} XGBoost can handle sparse data that may be generated from preprocessing steps or missing values. It uses a special split finding algorithm that is incorporated into it that can handle different types of sparsity patterns.
+\item\textbf{Weighted Quantile Sketch:} XGBoost has in-built the distributed weighted quantile sketch algorithm that makes it easier to effectively find the optimal split points among weighted datasets.
+\item\textbf{Cross-validation:} XGboost implementation comes with a built-in cross-validation method. This helps the algorithm prevents overfitting when the dataset is not that big.
 \end{enumerate}
 
 \newpage
@@ -1141,7 +1141,7 @@ It is also known as a context diagram. It’s designed to be an abstraction view
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.5]{0-LEVEL DFD}
+\includegraphics[scale=0.8]{0-LEVEL DFD}
 \caption{0-level DFD}
 \end{center}
 \end{figure}
@@ -1151,7 +1151,7 @@ In 1-level DFD, the context diagram is decomposed into multiple bubbles/processe
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.5]{1-LEVEL DFD}
+\includegraphics[scale=.8]{1-LEVEL DFD}
 \caption{1-level DFD}
 \end{center}
 \end{figure}
@@ -1161,7 +1161,7 @@ In 1-level DFD, the context diagram is decomposed into multiple bubbles/processe
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.5]{2- LEVEL DFD}
+\includegraphics[scale=.8]{2- LEVEL DFD}
 \caption{2-level DFD}
 \end{center}
 \end{figure}
@@ -1186,7 +1186,7 @@ The sequence diagram represents the flow of messages in the system and is also t
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.4]{Sequence diagram}
+\includegraphics[scale=.6]{Sequence diagram}
 \caption{Sequence Diagram}
 \end{center}
 \end{figure}
@@ -1197,7 +1197,7 @@ A use case diagram is used to represent the dynamic behavior of a system. It enc
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.3]{use case diagram}
+\includegraphics[scale=.8]{use case diagram}
 \caption{Use Case Diagram}
 \end{center}
 \end{figure}
@@ -1210,11 +1210,11 @@ An activity diagram is a behavioral diagram i.e. it depicts the behavior of a sy
 \vspace*{10px}
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.3]{Activity diagram}
+\includegraphics[scale=.8]{Activity diagram}
 \caption{Activity Diagram}
 \end{center}
 \end{figure}
-
+\newpage
 \subsubsection{Class Diagram}
 
 Class diagram is a static diagram. It represents the static view of an application. Class diagram is not only used for visualizing, describing, and documenting different aspects of a system but also for constructing executable code of the software application.
@@ -1225,7 +1225,7 @@ Class diagram shows a collection of classes, interfaces, associations, collabora
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.4]{Class diagram}
+\includegraphics[scale=.6]{Class diagram}
 \caption{Class Diagram}
 \end{center}
 \end{figure}
@@ -1239,7 +1239,7 @@ Class diagram shows a collection of classes, interfaces, associations, collabora
 The system architecture depicts the overall working of our system .
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.4]{ML1}
+\includegraphics[scale=.7]{ML1}
 \caption{System Architecture}
 \end{center}
 \end{figure}
@@ -1267,11 +1267,16 @@ The training data is trained with the different machine learning algorithm such 
 \subsection{Working}
 The working of the system is described as follows :
 \begin{steps}
-  \item \textbf{Login:} Login to the campus placement assistant website by signing up with email or using google for sign in .
-  \item \textbf{:}
+  \item \textbf{Login:} Login to the campus placement assistant website by signing up with email or using google for sign up. After sign up with google or email it will show the respective email id used for sign up and the user can sign in to the Login using the password or google with security enabled.
+  \item \textbf{Home Page:} The Login directs to the home page where we can go to options such as Placement Details, Placement Prediction, Mock Test and Interview Question.
+\item \textbf{Placement Details:} The placement details shows the current placement updates that are uploaded by the admin. Students can view all those details and can apply for those jobs and this allows a dedicated environment for the students to go for placement details updated by the admin.
+\item \textbf{Placement Prediction:}The student can check the probablity that they can get placed using placement predictor. The user details are transfered to deepnote after pressing the predict button, where the user details are used to predict the result by XGBoost classifier and the result is passed back to the placemnt prediction module as the person can get placed or not. If the person can't get placed the corresponding course details are displayed.
+\item \textbf{Mock Test and Interview Question:} To get better placement student can go through these moudules where they can practice with mock test and familiarize with interview questions.
+\item \textbf{Logout:} The user can logout and the page will be redirected to the sigin page.
 \end{steps}
+
 \newpage
-\begin{flushleft}\textbf{CHAPTER 8} \end{flushleft}
+\begin{flushleft}\textbf{CHAPTER 9} \end{flushleft}
 \begin{flushleft}\section{TESTING} \end{flushleft}
 \vspace*{10px}
 This section describes the testing procedure, staring with the testing methodology
@@ -1358,29 +1363,117 @@ output comes out as the specified requirement by the user. Hence output testing 
 not result in any correction in the system.
 \end{itemize}
 
+\newpage
+\begin{flushleft}\textbf{CHAPTER 10} \end{flushleft}
+\begin{flushleft}\section{RESULT} \end{flushleft}
+The placement predictor predicts that a student can be placed or not .
+\textbf{Placed}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.4]{Result}
+\caption{Student Predicted to be Placed}
+\end{center}
+\end{figure}
+\textbf{Not Placed}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.4]{Result0}
+\caption{Student Predicted to be not Placed}
+\end{center}
+\end{figure}
+\begin{flushleft}\textbf{CHAPTER 11} \end{flushleft}
+\begin{flushleft}\section{PERFOMANCE AND EVALUATION} \end{flushleft}
+The campus placement assistant uses the placement predictor to predict whether a student can be placd or not and for prediction we have derived to  XGBoost Classifier and to check the accuracy of the model confusion matrix has been used, the confusion matrix conveys the visual representation of the Actual VS Predicted values. It measures the performance of our Machine Learning classification model and looks like a table-like structure.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.4]{ResultP1}
+\caption{Confusion Matrix for XGBoost classifier}
+\end{center}
+\end{figure}
+The different values of the Confusion matrix would be as follows:
+\begin{itemize}
+\item \textbf{True Positive:} (TP) = 377; meaning 377 positive class data points were correctly classified by the model
+\item \textbf{True Negative:} (TN) = 413; meaning 413 negative class data points were correctly classified by the model
+\item \textbf{False Positive:} (FP) = 22; meaning 22 negative class data points were incorrectly classified as belonging to the positive class by the model
+\item \textbf{False Negative:} (FN) = 78; meaning 78 positive class data points were incorrectly classified as belonging to the negative class by the model
+\end {itemize}
+The graphs such as Area Under Curve AUC and Average Precision AP has been found :
+\textbf{AUC:}
+The AUC indicates whether your model can correctly rank examples. The AUC is the probability that a randomly selected positive example has a higher predicted probability of being positive than a randomly selected negative example. The AUC is calculated as the area underneath a curve that measures the trade off between true positive rate (TPR) and false positive rate (FPR) at different decision thresholds d.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.4]{ResultP2}
+\caption{AUC for XGBoost classifier}
+\end{center}
+\end{figure}
+\textbf{AP:}
+Average precision indicates whether your model can correctly identify all the positive examples without accidentally marking too many negative examples as positive. Thus, average precision is high when your model can correctly handle positives. Average precision is calculated as the area under a curve that measures the trade off between precision and recall at different decision thresholds.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.4]{ResultP3}
+\caption{AP for XGBoost classifier}
+\end{center}
+\end{figure}
+The result that we obtained using XGBoost classifier has got about 89\% of accuracy.
+\newpage
+\begin{flushleft}\textbf{CHAPTER 12} \end{flushleft}
+\begin{flushleft}\section{SCREENSHOT} \end{flushleft}
 
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=16cm, height=8cm]{Screenshot1}
+\caption{Login Page }
+\end{center}
+\end{figure}
 
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=16cm, height=8cm]{Screenshot2}
+\caption{Sign Up Page}
+\end{center}
+\end{figure}
 
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=16cm, height=8cm]{Screenshot3}
+\caption{Home Page }
+\end{center}
+\end{figure}
 
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=16cm, height=8cm]{Screenshot4}
+\caption{Other options}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=16cm, height=8cm]{Screenshot5}
+\caption{Placement Details}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=16cm, height=8cm]{Screenshot6}
+\caption{Placement Prediction}
+\end{center}
+\end{figure}
 
 \newpage
 
 
-\begin{flushleft}\textbf{CHAPTER 6} \end{flushleft}
+\begin{flushleft}\textbf{CHAPTER 13} \end{flushleft}
 \begin{flushleft}\section{CONCLUSION} \end{flushleft}
-
-      The various Machine Learning algorithms are discussed in the reference of Student survey.
-The collected dataset is preprocessed enough to utilize effectively. The classification of structure
-dataset is executed in Weka with all possible nodes and attributes. The dynamic analyze is carried
-out on structural dataset with different parameters and attributes. The applied ML algorithms is
-helping to generate high recommendations for prediction of student engagement in various social
-media platform as LinkedIn, Facebook, Instagram, Snapchat, Telegram, Twitter, Whatsapp, Etc.
-The different algorithm has derived its best possible outcomes in association of student social
-engagement. It concludes that random forest can be most desirable option for the same study.
-Here from the facial expressions determining the behaviors of individual students and analysing
-their depression.
-\newpage
-
+The campus placement assistant will hep the student to get all the placement support in a nutshell that include placement details from the admin, placement prediction using the best machine learning algorithm, mock test and interview question. In the case of Placement Prediction a point-by - point analysis was performed based on specific 
+machine learning algorithms for predicting the placement probablity and XGBoost classifier has the best accuracy with 89\%. The student dataset including academic and selection subtleties is clearly a 
+possible hotspot from the exam for forecasting future selection 
+possibilities. Such forecast will empower students to consider 
+their skills and develop according to their needs. This 
+methodology also helps to prepare appropriate procedures and 
+strengthen the recruitment statistics for future years in the 
+scholastic arrangement of an establishment. The placement officer of a campus can also benefit from this system to have an organised platform for placement.
 
 
 
