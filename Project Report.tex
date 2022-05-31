@@ -850,10 +850,12 @@ So in this paper we have decided to use huge dataset and select the best algorit
 \begin{flushleft}\section{PROPOSED SYSTEM} \end{flushleft}
 \subsection{Introduction}
 The importance of campus placement assistant system is to modify the present 
-manual system where there the data are unorganized manner. Due to unorganized data the stakeholders namely Placement Officers and Recruiters face difficulty in selecting the best student from the campus. The students should also need to have a clear picture of the placements going in the campus, so an effective computerized system will help the stakeholders to select the best student and the student to understand their level that is whether they can be placed or not.
+manual system where there the datas are in an unorganized manner. Due to unorganized data the stakeholders namely Placement Officers and Recruiters face difficulty in selecting the best student from the campus. The students should also need to have a clear picture of the placements going in the campus, so an effective computerized system will help the stakeholders to select the best student and the student to understand their level that is whether they can be placed or not.
 
-\vspace*{10px}
-\subsection{Anvil}
+The propsed system helps a student to get the placement details and can check for placement prediction, mock test and interview question this helps the student to have an environment where the student can get placement details. This also helps the admin or placement officer to get the details of student after prediction and the placemnt details from the company or recruiters can be directly passed to the students. 
+
+\subsection{Technology used}
+\subsubsection{Anvil}
 Anvil is a new way to build web apps, with nothing but Python. This documentation will tell you all about how it works.
 You do not need to know anything about HTML, Javascript or website development to use Anvil. All you need is some familiarity with the Python programming language.Anvil fills in these gaps by allowing you to build a full-stack web app using only Python. You can build a user interface with a simple drag and drop UI (or build it with code if you insist), plot with your favorite Python plotting library (Plotly, Matplotlib, etc.), and then deploy to the web in one click. No servers or containers to deal with.
 
@@ -880,7 +882,7 @@ What else you can do. Anvil also has built-in support for:
 \\
 Deepnote is a seriously slick Python notebook, hosted in the cloud, with incredible real-time collaboration. It’s great for working with other data scientists. But what happens when you want to share your project with non-programmers? They need an easy-to-use interface – so you need to deploy what you’ve built. Deepnote has been used to integrate the machine learning code to Anvil.
 \newpage
-\subsection{Python Packages}
+\subsubsection{Python Packages}
 \textbf{NumPy}
 NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
 
@@ -921,25 +923,72 @@ Seaborn offers the following functionalities:
 \end{itemize}
 
 \newpage
-\subsection{Git Hub}
+\subsection{GitHub}
+GitHub is a Git repository hosting service that provides a web-based graphical interface (GUI). It helps every team member work together on a project from anywhere, making it easy to collaborate. 
 
-GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
-GitHub is an online software development platform used for storing, tracking, and collaborating on software projects. It enables developers to upload their own code files and to collaborate with fellow developers on open-source projects.
-\par
-A GitHub repository can be used to store a development project.
-It can contain folders and any type of files (HTML, CSS, JavaScript, Documents, Data, Images).
-A GitHub repository should also include a licence file and a README file about the project.
-A GitHub repository can also be used to store ideas, or any resources that you want to share.
-\par
-A GitHub branch is used to work with different versions of a repository at the same time.
-By default a repository has a master branch (a production branch).
-Any other branch is a copy of the master branch (as it was at a point in time).
-New Branches are for bug fixes and feature work separate from the master branch. When changes are ready, they can be merged into the master branch. If you make changes to the master branch while working on a new branch, these updates can be pulled in.
-\par
-Pull Requests are the heart of GitHub collaboration.
-With a pull request you are proposing that your changes should be merged (pulled in) with the master.
-Pull requests show content differences, changes, additions, and subtractions in colors (green and red).
-As soon as you have a commit, you can open a pull request and start a discussion, even before the code is finished.
+GitHub is one place where project managers and developers coordinate, track, and update their work, so projects stay transparent and on schedule. The packages can be published privately, within the team, or publicly for the open-source community. Downloading packages from GitHub enables them to be used and reused. GitHub helps all team members stay on the same page and stay organized. Moderation tools, like issue and pull request locking, helps the team focus on the code.
+
+\textbf{GitHub Desktop}
+GitHub Desktop is an application that enables GUI-based interaction with GitHub. Git provides a wide range of commands for Git activities like creating repositories, commits, pull requests, and so on. However, GitHub desktop provides GUI-based those activities using best practices with Git and GitHub. We can use GitHub desktop to do most of the Git commands with UI and clicks which makes collaboration and working with Git more flexible. You can connect to your account, create git repositories, add projects, do the changes, and commit easily with the interface. I will be doing hands-on with the GitHub desk in this article.
+
+\subsubsection{XGBoost}
+XgBoost stands for Extreme Gradient Boosting, which was proposed by the researchers at the University of Washington. It is a library written in C++ which optimizes the training for Gradient Boosting.
+
+Before understanding the XGBoost, we first need to understand the trees especially the decision tree:
+\textbf{Decision Tree:}
+A Decision tree is a flowchart-like tree structure, where each internal node denotes a test on an attribute, each branch represents an outcome of the test, and each leaf node (terminal node) holds a class label. 
+
+A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions.
+
+\textbf{Bagging:}
+A Bagging classifier is an ensemble meta-estimator that fits base classifiers each on random subsets of the original dataset and then aggregate their individual predictions (either by voting or by averaging) to form a final prediction. Such a meta-estimator can typically be used as a way to reduce the variance of a black-box estimator (e.g., a decision tree), by introducing randomization into its construction procedure and then making an ensemble out of it.
+Each base classifier is trained in parallel with a training set which is generated by randomly drawing, with replacement, N examples(or data) from the original training dataset, where N is the size of the original training set. The training set for each of the base classifiers is independent of each other. Many of the original data may be repeated in the resulting training set while others may be left out.
+
+Bagging reduces overfitting (variance) by averaging or voting, however, this leads to an increase in bias, which is compensated by the reduction in variance though.
+
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=10cm, height=3.9cm]{Tech1}
+\caption{Bagging Classifier}
+\end{center}
+\end{figure}
+
+\textbf{Random Forest:}
+Every decision tree has high variance, but when we combine all of them together in parallel then the resultant variance is low as each decision tree gets perfectly trained on that particular sample data and hence the output doesn’t depend on one decision tree but multiple decision trees. In the case of a classification problem, the final output is taken by using the majority voting classifier. In the case of a regression problem, the final output is the mean of all the outputs. This part is Aggregation.
+ 
+
+The basic idea behind this is to combine multiple decision trees in determining the final output rather than relying on individual decision trees.
+Random Forest has multiple decision trees as base learning models. We randomly perform row sampling and feature sampling from the dataset forming sample datasets for every model. This part is called Bootstrap.
+
+\textbf{Boosting:}
+Boosting is an ensemble modelling, technique that attempts to build a strong classifier from the number of weak classifiers. It is done by building a model by using weak models in series. Firstly, a model is built from the training data. Then the second model is built which tries to correct the errors present in the first model. This procedure is continued and models are added until either the complete training data set is predicted correctly or the maximum number of models are added.
+
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=10cm, height=3.9cm]{Tech2}
+\caption{Boosting}
+\end{center}
+\end{figure}
+
+\textbf{Gradient Boosting }
+Gradient Boosting is a popular boosting algorithm. In gradient boosting, each predictor corrects its predecessor’s error. In contrast to Adaboost, the weights of the training instances are not tweaked, instead, each predictor is trained using the residual errors of predecessor as labels.
+
+There is a technique called the Gradient Boosted Trees whose base learner is CART (Classification and Regression Trees).
+
+\textbf{XGBoost }
+XGBoost is an implementation of Gradient Boosted decision trees. XGBoost models majorly dominate in many Kaggle Competitions.
+
+In this algorithm, decision trees are created in sequential form. Weights play an important role in XGBoost. Weights are assigned to all the independent variables which are then fed into the decision tree which predicts results. The weight of variables predicted wrong by the tree is increased and these variables are then fed to the second decision tree. These individual classifiers/predictors then ensemble to give a strong and more precise model. It can work on regression, classification, ranking, and user-defined prediction problems.
+
+\textbf{Features of XGBoost}
+\begin{enumerate}
+\item \bf{Regularization:} Since the ensembling of decisions, trees can sometimes lead to very complex. XGBoost uses both Lasso and Ridge Regression regularization to penalize the highly complex model.
+\item \bf{Parallelization} and Cache block: In, XGboost, we cannot train multiple trees parallel, but it can generate the different nodes of tree parallel. For that, data needs to be sorted in order. In order to reduce the cost of sorting, it stores the data in blocks. It stored the data in the compressed column format, with each column sorted by the corresponding feature value. This switch improves algorithmic performance by offsetting any parallelization overheads in computation.
+\item \bf{Tree Pruning:}  XGBoost uses max_depth parameter as specified the stopping criteria for the splitting of the branch, and starts pruning trees backward. This depth-first approach improves computational performance significantly.
+\item \bf{Cache-Awareness and Out-of-score computation:} This algorithm has been designed to make use of hardware resources efficiently. This is accomplished by cache awareness by allocating internal buffers in each thread to store gradient statistics. Further enhancements such as ‘out-of-core computing optimize available disk space while handling big data-frames that do not fit into memory. In out-of-core computation, Xgboost tries to minimize the dataset by compressing it.
+\item \bf{Sparsity Awareness:} XGBoost can handle sparse data that may be generated from preprocessing steps or missing values. It uses a special split finding algorithm that is incorporated into it that can handle different types of sparsity patterns.
+\item \bf{Weighted Quantile Sketch:} XGBoost has in-built the distributed weighted quantile sketch algorithm that makes it easier to effectively find the optimal split points among weighted datasets.
+\item \bf{Cross-validation:} XGboost implementation comes with a built-in cross-validation method. This helps the algorithm prevents overfitting when the dataset is not that big.
 
 \newpage
 \begin{flushleft}\textbf{CHAPTER 4} \end{flushleft}
